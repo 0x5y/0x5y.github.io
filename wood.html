@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wood</title>
+    <script>
+        function Calculate() {
+            let woodcost = document.getElementById("woodcost").value;
+            let amount = document.getElementById("woodamount").value;
+            let enchsell = document.getElementById("enchsellvalue").value;
+            // let money = document.getElementById("currentmoney").value;
+            document.getElementById("costofwood").innerHTML = "Wood Cost: " + woodcost * amount + " coins";
+            document.getElementById("enchsell").innerHTML = "Enchanted Sell Value: " + (amount / 160) * enchsell + " coins";
+            document.getElementById("profit").innerHTML = "Profit: " + (((amount / 160) * enchsell) - (woodcost * amount)) + " coins";
+            // document.getElementById("newmoney").innerHTML = "Your new money: " + (money + (((amount / 160) * enchsell) - (woodcost * amount)))  + " coins";
+        }
+    </script>
+    <style>
+        body {
+            background-color: black;
+        }
+        h1 {
+            font-size: 300%;
+            color: #7abaff;
+        }
+        input {
+            padding: 5px 5px;
+            font-size: 225%;
+            background-color: #9fcdff;
+        }
+        p {
+            color: #7abaff;
+            font-size: 200%;
+        }
+    </style>
+</head>
+    <body>
+        <h1>Welcome to the Wood Profit Calculator!</h1>
+        <noscript>You need to enable JavaScript to run this app.</noscript>
+        <label>
+            <input id="woodcost" type="text" oninput="Calculate()" placeholder="Current Wood Cost ex. 5.7">
+            <input id="woodamount" type="text" oninput="Calculate()" placeholder="Wood amount">
+            <input id="enchsellvalue" type="text" oninput="Calculate()" placeholder="Enchanted Wood Sell Value">
+<!--            <input id="currentmoney" type="text" oninput="Calculate()" placeholder="Your current money">-->
+        </label>
+        <p id="costofwood">Fill in everything!</p>
+        <p id="enchsell">Fill in everything!</p>
+        <p id="profit">Fill in everything!</p>
+<!--        <p id="newmoney">Fill in everything!</p>-->
+    </body>
+</html>
