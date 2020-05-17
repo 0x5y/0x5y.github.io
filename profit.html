@@ -8,7 +8,7 @@
             let amount = document.getElementById("woodamount").value;
             let enchsell = document.getElementById("enchsellvalue").value;
             // let money = document.getElementById("currentmoney").value;
-            document.getElementById("costofwood").innerHTML = "Wood Cost: " + woodcost * amount + " coins";
+            document.getElementById("costofwood").innerHTML = "Cost: " + woodcost * amount + " coins";
             document.getElementById("enchsell").innerHTML = "Enchanted Sell Value: " + (amount / 160) * enchsell + " coins";
             document.getElementById("profit").innerHTML = "Profit: " + (((amount / 160) * enchsell) - (woodcost * amount)) + " coins";
             // document.getElementById("newmoney").innerHTML = "Your new money: " + (money + (((amount / 160) * enchsell) - (woodcost * amount)))  + " coins";
